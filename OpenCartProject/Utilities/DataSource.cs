@@ -58,49 +58,84 @@ namespace OpenCartProject.Utilities
 
 
         }
+        public static object[] ValidLoginData()
+
+        {
+
+            string[] dataSet1 = new string[2];
+
+            dataSet1[0] = "sdevkar39@gmail.com";
+            dataSet1[1] = "devkar@00";
+
+
+            object[] allDataSet = new object[1];
+            allDataSet[0] = dataSet1;
+
+
+            return allDataSet;
+        }
+        public static object[] InvalidLoginData()
+
+        {
+
+            string[] dataSet1 = new string[2];
+
+            dataSet1[0] = "sdfgyhh@gmail.com";
+            dataSet1[1] = "devkar@00";
+
+
+            object[] allDataSet = new object[1];
+            allDataSet[0] = dataSet1;
+
+
+            return allDataSet;
+        }
 
 
 
-      
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /*public static object[] InvalidLoginData2()
         {
             object[] data = ExcelUtils.GetSheetIntoObjectArray
