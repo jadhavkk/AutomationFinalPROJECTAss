@@ -82,6 +82,7 @@ namespace OpenCartProject.Utilities
 
             dataSet1[0] = "sdfgyhh@gmail.com";
             dataSet1[1] = "devkar@00";
+           
 
 
             object[] allDataSet = new object[1];
@@ -104,6 +105,29 @@ namespace OpenCartProject.Utilities
 
 
 
+        public static object[] ValidRegisterTest()
+        {
+            object[] data = ExcelUtils.GetSheetIntoObjectArray
+                (@"", "ValidRegisterTest");
+            return data;
+        }
+
+
+
+        public static object[] InvalidRegisterTest()
+        {
+            object[] data = ExcelUtils.GetSheetIntoObjectArray
+                (@"", "InvalidRegisterTest");
+            return data;
+        }
+
+
+        public static object[] AddRegisterTest()
+        {
+            object[] data = ExcelUtils.GetSheetIntoObjectArray
+                (@"", "AddRegisterTest");
+            return data;
+        }
 
 
 
@@ -123,20 +147,7 @@ namespace OpenCartProject.Utilities
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*public static object[] InvalidLoginData2()
+        /*public static object[] InvalidLogin()
         {
             object[] data = ExcelUtils.GetSheetIntoObjectArray
                 (@"", "InvalidRegisterTest");
@@ -147,7 +158,7 @@ namespace OpenCartProject.Utilities
         public static object[] AddUserTest()
         {
             object[] data = ExcelUtils.GetSheetIntoObjectArray
-                (@"", "AddUserTest");
+                (@"", "AddRegisterTest");
             return data;
         }*/
     }

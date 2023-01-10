@@ -1,4 +1,5 @@
 ﻿using OpenCartProject.Base;
+using OpenCartProject.Pages;
 using OpenCartProject.Utilities;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
@@ -17,6 +18,14 @@ namespace OpenCartProject
         [Test, TestCaseSource(typeof(DataSource), nameof(DataSource.ValidRegisterData))]
         public void AddRegisterTest(string username, string firstname, string lastname, string email, string country, string password)
         {
+
+
+            RegisterPage registerpage = new RegisterPage(driver);
+
+            registerpage.EnterUsername("");
+            registerpage.EnterPassword("password");
+            registerpage.ClickOnRegister();
+
 
             driver.FindElement(By.XPath("(//a[text()='Register'])[2]")).Click();
             driver.FindElement(By.XPath("//input[@placeholder='Username']")).SendKeys(username);
