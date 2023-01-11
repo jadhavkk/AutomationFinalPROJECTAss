@@ -15,7 +15,8 @@ namespace OpenCartProject
         {
 
             driver.FindElement(By.XPath("//a[text()='Resources ']")).Click();
-            driver.FindElement(By.XPath("(//a[text()='OpenCart Documentation'])[1]")).Click();
+            driver.FindElement(By.XPath("((//a[text()='OpenCart Books'])[1]")).Click();
+
             
 
 

@@ -16,15 +16,20 @@ namespace OpenCartProject
         {
 
         [Test, TestCaseSource(typeof(DataSource), nameof(DataSource.ValidRegisterData))]
-        public void AddRegisterTest(string username, string firstname, string lastname, string email, string country, string password)
+        public void ValidRegisterTest(string username, string firstname, string lastname, string email, string country, string password)
         {
 
 
             RegisterPage registerpage = new RegisterPage(driver);
 
-            registerpage.EnterUsername("");
-            registerpage.EnterPassword("password");
             registerpage.ClickOnRegister();
+            registerpage.EnterUsername("username");
+            registerpage.EnterFirstname("firstname");
+            registerpage.Enterlastname("lastname");
+            registerpage.EnterEmail("email");
+            registerpage.EnterCountryName("country_id");
+            registerpage.EnterPassword("password");
+            registerpage.ClickOnRegister2();
 
 
             driver.FindElement(By.XPath("(//a[text()='Register'])[2]")).Click();
