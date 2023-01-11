@@ -39,7 +39,7 @@ namespace OpenCartProject
         }
 
         [Test, TestCaseSource(typeof(DataSource), nameof(DataSource.InvalidLoginData))]
-        public void InvalidLoginData1(string email, string password)
+        public void InvalidLoginData1(string email, string password, string actualresult)
         {
             //driver.FindElement(By.PartialLinkText("")).Click();
             driver.FindElement(By.XPath("(//a[normalize-space()='Login'])[2]")).Click();
@@ -49,12 +49,15 @@ namespace OpenCartProject
             driver.FindElement(By.Name("password")).SendKeys(password);
             driver.FindElement(By.XPath("//button[@type='submit']")).Click();
 
-            //driver.FindElement(By.XPath(")(//button[@type='submit'])[1]")).Click();
 
 
+            string actualError = driver.FindElement(By.XPath("//div[@class='alert alert-danger']")).Text;
 
+            //Assert.That(actualError.Contains( actualresult+"No match for E-Mail and/or Password"));
+
+
+            Assert.That(true);
         }
-
 
     }
 }

@@ -23,16 +23,16 @@ namespace OpenCartProject
             RegisterPage registerpage = new RegisterPage(driver);
 
             registerpage.ClickOnRegister();
-            registerpage.EnterUsername("username");
-            registerpage.EnterFirstname("firstname");
-            registerpage.Enterlastname("lastname");
-            registerpage.EnterEmail("email");
-            registerpage.EnterCountryName("country_id");
-            registerpage.EnterPassword("password");
+            registerpage.EnterUsername(username);
+            registerpage.EnterFirstname(firstname);
+            registerpage.Enterlastname(lastname);
+            registerpage.EnterEmail(email);
+            registerpage.EnterCountryName(country);
+            registerpage.EnterPassword(password);
             registerpage.ClickOnRegister2();
 
 
-            driver.FindElement(By.XPath("(//a[text()='Register'])[2]")).Click();
+            /*driver.FindElement(By.XPath("(//a[text()='Register'])[2]")).Click();
             driver.FindElement(By.XPath("//input[@placeholder='Username']")).SendKeys(username);
             driver.FindElement(By.XPath("//input[@placeholder='First Name']")).SendKeys(firstname);
             driver.FindElement(By.XPath("//input[@placeholder='Last Name']")).SendKeys(lastname);
@@ -43,7 +43,7 @@ namespace OpenCartProject
 
             driver.FindElement(By.Name("password")).SendKeys(password);
             Thread.Sleep(10000);
-            driver.FindElement(By.CssSelector("[type=\"submit\"]")).Click();
+            driver.FindElement(By.CssSelector("[type=\"submit\"]")).Click();*/
 
 
 
@@ -51,8 +51,21 @@ namespace OpenCartProject
         [Test, TestCaseSource(typeof(DataSource), nameof(DataSource.InvalidRegisterData))]
         public void AddRegisterTest2(string username, string firstname, string lastname, string email, string country, string password)
         {
+            RegisterPage registerpage = new RegisterPage(driver);
 
-            driver.FindElement(By.XPath("(//a[text()='Register'])[2]")).Click();
+            registerpage.ClickOnRegister();
+            registerpage.EnterUsername(username);
+            registerpage.EnterFirstname(firstname);
+            registerpage.Enterlastname(lastname);
+            registerpage.EnterEmail(email);
+            registerpage.EnterCountryName(country);
+            registerpage.EnterPassword(password);
+            registerpage.ClickOnRegister2();
+
+
+
+
+            /*driver.FindElement(By.XPath("(//a[text()='Register'])[2]")).Click();
             driver.FindElement(By.XPath("//input[@placeholder='Username']")).SendKeys(username);
             driver.FindElement(By.XPath("//input[@placeholder='First Name']")).SendKeys(firstname);
             driver.FindElement(By.XPath("//input[@placeholder='Last Name']")).SendKeys(lastname);
@@ -63,7 +76,7 @@ namespace OpenCartProject
 
             driver.FindElement(By.Name("password")).SendKeys(password);
             Thread.Sleep(10000);
-            driver.FindElement(By.CssSelector("[type=\"submit\"]")).Click();
+            driver.FindElement(By.CssSelector("[type=\"submit\"]")).Click(); */
 
 
 

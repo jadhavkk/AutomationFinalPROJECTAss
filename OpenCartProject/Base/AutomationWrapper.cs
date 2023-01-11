@@ -45,7 +45,7 @@ namespace OpenCartProject.Base
         public void AfterMethod()
         {
 
-            driver.Quit();
+           // driver.Quit();
         }
 
 

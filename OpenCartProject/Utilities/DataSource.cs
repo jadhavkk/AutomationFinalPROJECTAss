@@ -1,4 +1,5 @@
-﻿using OpenCartProject.Base;
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using OpenCartProject.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +34,17 @@ namespace OpenCartProject.Utilities
 
         } 
 
+        public static object[] ForgotPasswordData1()
+        {
+            string[] dataSet1 = new string[1];
+
+            dataSet1[0] = "sdevkar39@gmail.com";
+
+            object[] allDataSet = new object[1];
+            allDataSet[0] = dataSet1;
+            return allDataSet;
+        }
+
 
 
 
@@ -66,6 +78,7 @@ namespace OpenCartProject.Utilities
 
             dataSet1[0] = "sdevkar39@gmail.com";
             dataSet1[1] = "devkar@00";
+           
 
 
             object[] allDataSet = new object[1];
@@ -78,11 +91,13 @@ namespace OpenCartProject.Utilities
 
         {
 
-            string[] dataSet1 = new string[2];
+            string[] dataSet1 = new string[3];
 
             dataSet1[0] = "sdfgyhh@gmail.com";
             dataSet1[1] = "devkar@00";
-           
+            dataSet1[2] ="No match for E - Mail and / or Password";
+
+
 
 
             object[] allDataSet = new object[1];
